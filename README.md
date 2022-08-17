@@ -1,5 +1,6 @@
 #Hallo zusammen
 in dieser zweiten Version habe ich die Content.js bearbeitet/verbessert, da "onClick" auf die Posts nur noch die Werte aus dem bereits gepulltem Array abgefragt werden (und nicht mehr bei jedem Klick ein neuer Request getriggert wird).
+Veröffentlich unter https://ng-webdev.github.io/si-task/
 
 
 # Getting Started with Create React App
