@@ -1,0 +1,118 @@
+.header {
+  background-color: #fff000; // lidl yellow
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navi {
+  list-style: none inside;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.navi li {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  margin-right: 0.5rem;
+  position: relative;
+  background: #8ebc1e; /* pro zero light green */
+  border-radius: 0.1rem;
+}
+.navi li a {
+  display: block;
+  padding: 0;
+  text-decoration: none;
+  width: 7rem; 
+  padding: 0.7rem; 
+  color: #ffffff;
+}
+.navi li li a {
+  font-size: 0.8rem;
+  background-color: #8ebc1e;
+}
+
+.navi li li {
+  position: relative;
+  left: 1rem;
+  list-style: none;
+  margin-top: 0.05rem;
+}
+.navi li:hover {
+  background: #005151; // pro zero green - hover highlight
+} 
+.navi ul {
+  position: absolute;
+  padding: 0;
+  left: 0;
+  display: none; // hiding sublist
+}
+.navi li:hover ul {
+  display: block;
+} 
+
+.navi li li:hover ul {
+  display: block;
+}
+.navi li li:hover a {
+  background-color: #005151;
+}
+
+.ham {
+  color: #005151;
+  width: 2rem;
+  height: 2rem;
+  border: #005151 solid 1px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+  padding-left: 7px;
+  opacity: 0.9;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 20;
+  top: 1rem;
+  right: 1rem;
+}
+
+@media (max-width: 639px) {
+  .header {
+    position: absolute;
+    z-index: 10;
+    right: 0vh;
+    background-image: linear-gradient(to right top, #005151, #006e5c, #008b57, #4ca544, #8ebc1e);
+    height: 100vh;
+    width: 100vw;
+    transition: 0.5s;
+
+    .navi {
+      position: absolute;
+      top: 4rem;
+      left: 3rem;
+      flex-direction: column;
+      li {
+        margin-bottom: 3rem;
+      }
+      li li {
+        position: relative;
+        left: 7rem;
+        bottom: 4rem;
+        margin-bottom: 0.05rem;
+      }
+    }
+  }
+
+  .ham {
+    display: block;
+  }
+
+  .header.active {
+    right: -100vh;
+    transition: 0.5s;
+  }
+}
