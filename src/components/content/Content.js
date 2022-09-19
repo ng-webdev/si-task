@@ -40,15 +40,13 @@ const Content = (props) => {
             </div>
             {body}
             <hr />
-            {selectedUser[0] ? <>
+            {selectedUser[0] && <>
             <h5>
               <b>{selectedUser[0].name}</b>
             </h5>
             <p>
               <a href="#">{selectedUser[0].website}</a>
             </p></>
-            :
-            <></>  
           }
           </div>
         </div>
